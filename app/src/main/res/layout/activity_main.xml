@@ -1,18 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10sp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="120sp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo" />
+
+        <LinearLayout
+            android:id="@+id/add_student_btn"
+            android:layout_marginTop="50sp"
+            android:padding="10sp"
+            android:gravity="center"
+            android:background="@drawable/border"
+            android:layout_width="180sp"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_student"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:src="@drawable/add_student_icon"
+                android:contentDescription="@string/add_student"
+                android:layout_marginStart="10sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/records_btn"
+            android:layout_marginTop="20sp"
+            android:padding="10sp"
+            android:gravity="center"
+            android:background="@drawable/border"
+            android:layout_width="180sp"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_records"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:src="@drawable/records_icon"
+                android:contentDescription="@string/add_student"
+                android:layout_marginStart="10sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/github_btn"
+            android:layout_marginTop="20sp"
+            android:padding="10sp"
+            android:gravity="center"
+            android:background="@drawable/border"
+            android:layout_width="180sp"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/commits"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:src="@drawable/github_icon"
+                android:contentDescription="@string/add_student"
+                android:layout_marginStart="10sp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
