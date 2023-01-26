@@ -2,6 +2,10 @@
     <string name="app_name">Darul-uloom</string>
     <string name="logo">logo</string>
     <string name="add_student">نیا شاگرد</string>
+    <string name="student_name">شاگرد کا نام</string>
+    <string name="register">اندراج</string>
+    <string name="cancel">منسوخ</string>
+    <string name="error_msg">یہ فیلڈ خالی نہیں ہو سکتی</string>
     <string name="view_records">ریکارڈ</string>
     <string name="commits">کمٹس</string>
 </resources>
