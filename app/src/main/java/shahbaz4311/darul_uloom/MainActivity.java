@@ -1,20 +1,28 @@
 package shahbaz4311.darul_uloom;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.Objects;
+
+import shahbaz4311.darul_uloom.utils.MyCustomDialog;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     LinearLayout add_student_btn,records_btn,github_btn;
@@ -76,45 +84,51 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void add_student() {
+        MyCustomDialog dialog = new MyCustomDialog();
+        dialog.setCancelable(false);
+        dialog.show(getSupportFragmentManager(),getString(R.string.add_student));
         //dialog box for adding student
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        //modified title for the dialog box
-        TextView title = new TextView(MainActivity.this);
-        title.setText(R.string.add_student);
-        title.setTextSize(24);
-        title.setGravity(Gravity.START);
-        title.setPadding(60, 60, 30, 20);
-        title.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.add_student_icon,0);
-        title.setCompoundDrawablePadding(20);
-        //setting the title for the dialog box
-        builder.setCustomTitle(title);
+//        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(MainActivity.this,R.style.AlertDialogTheme);
+////        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this,R.style.AlertDialogTheme);
+//        //modified title for the dialog box
+//        TextView title = new TextView(MainActivity.this);
+//        title.setText(R.string.add_student);
+//        title.setTextSize(30);
+//        title.setGravity(Gravity.START);
+//        title.setPadding(60, 60, 65, 20);
+//        //setting title icon
+//        Drawable icon = ContextCompat.getDrawable(MainActivity.this, R.drawable.add_student_icon);
+//        icon.setBounds(0, 0, 100, 100);
+//        title.setCompoundDrawables(null, null, icon, null);
+//        title.setCompoundDrawablePadding(20);
+//        //setting the title for the dialog box
+//        builder.setCustomTitle(title);
+//        //setting layout for the dialog box
+//        LayoutInflater inflater= getLayoutInflater();
+//        final View dialogView=inflater.inflate(R.layout.student_name,null);
+//        builder.setView(dialogView);
+//        //getting the edit text for the name
+//        final EditText name = dialogView.findViewById(R.id.student_name_input);
+//
+//        //setting on click listener for the dialog box to register student
+//        builder.setPositiveButton(R.string.register, (dialog, which) -> {
+//            //check if the name is empty display error
+//            Toast.makeText(MainActivity.this, "Can't Exit", Toast.LENGTH_SHORT).show();
+//        });
+//        builder.setOnDismissListener(dialog -> {});
+//        //setting on click listener for the dialog box to cancel the dialog box
+//        builder.setNegativeButton(R.string.cancel, (dialog, which) -> dialog.dismiss());
+//
+//        //make it non cancelable
+//        builder.setCancelable(false);
 
-        //creating edit text for the dialog box
-        final EditText name = new EditText(MainActivity.this);
-        name.setHint(R.string.student_name);
-        name.setInputType(InputType.TYPE_CLASS_TEXT);
-        builder.setView(name);
 
-        //setting on click listener for the dialog box to register student
-        builder.setPositiveButton(R.string.register, (dialog, which) -> {
-            //check if the name is empty display error
-            if (name.getText().toString().isEmpty()){
-                name.setError("abc");
-            }else{
-                //if not empty then register the student
-                //do something
-
-            }
-        });
-
-        //setting on click listener for the dialog box to cancel the dialog box
-        builder.setNegativeButton(R.string.cancel, (dialog, which) -> dialog.dismiss());
-
-        //make it non cancelable
-        builder.setCancelable(false);
 
 
         //show the dialog box
-        builder.show();
+//        builder.show();
+
+
+
     }
 }
