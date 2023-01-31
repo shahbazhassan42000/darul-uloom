@@ -2,6 +2,7 @@ package shahbaz4311.darul_uloom.Adapters;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +12,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.Serializable;
 import java.util.List;
 
+import shahbaz4311.darul_uloom.HistoryActivity;
 import shahbaz4311.darul_uloom.Models.Student;
 import shahbaz4311.darul_uloom.R;
 
@@ -57,7 +60,10 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
 
                 @Override
                 public void onClick(View v) {
-                        Log.d(TAG, student.toString());
+                        //creating history activity and setting current student in intent
+                        Intent intent = new Intent(v.getContext(), HistoryActivity.class);
+                        intent.putExtra("student", (Serializable)student);
+                        v.getContext().startActivity(intent);
                 }
         }
 }
