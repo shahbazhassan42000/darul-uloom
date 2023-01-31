@@ -11,4 +11,10 @@
     <string name="student_added">شاگرد شامل کر دیا گیا یے</string>
     <string name="error_while_adding_student">شاگرد کا اندراج ناکام</string>
     <string name="student_id">شاگرد کی آی ڈی</string>
+    <string name="mazil">منزل</string>
+    <string name="sabqi">سبقی</string>
+    <string name="start">شروع</string>
+    <string name="end">ختم</string>
+    <string name="sabaq">سبق</string>
+    <string name="date">تاریخ</string>
 </resources>
