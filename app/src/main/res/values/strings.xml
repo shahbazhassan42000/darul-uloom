@@ -8,4 +8,7 @@
     <string name="error_msg">یہ فیلڈ خالی نہیں ہو سکتی</string>
     <string name="view_records">ریکارڈ</string>
     <string name="commits">کمٹس</string>
+    <string name="student_added">شاگرد شامل کر دیا گیا یے</string>
+    <string name="error_while_adding_student">شاگرد کا اندراج ناکام</string>
+    <string name="student_id">شاگرد کی آی ڈی</string>
 </resources>

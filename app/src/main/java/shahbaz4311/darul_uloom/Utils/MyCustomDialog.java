@@ -1,4 +1,4 @@
-package shahbaz4311.darul_uloom.utils;
+package shahbaz4311.darul_uloom.Utils;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -11,20 +11,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 
-import shahbaz4311.darul_uloom.MainActivity;
 import shahbaz4311.darul_uloom.R;
 
 public class MyCustomDialog extends DialogFragment {
+    DBMS dbms;
+    EditText name;
 
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+        dbms = new DBMS(getActivity());
         //dialog box for adding student
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AlertDialogTheme);
         //modified title for the dialog box
@@ -45,7 +47,7 @@ public class MyCustomDialog extends DialogFragment {
         final View view = inflater.inflate(R.layout.student_name, null);
         builder.setView(view);
         //getting the edit text for the name
-        final EditText name = view.findViewById(R.id.student_name_input);
+        name = view.findViewById(R.id.student_name_input);
 
         //listening for edit text to change the text
         name.addTextChangedListener(new TextWatcher() {
@@ -74,7 +76,8 @@ public class MyCustomDialog extends DialogFragment {
         });
 
         //setting on click listener for the dialog box to register student
-        builder.setPositiveButton(R.string.register, (dialog, which) -> {});
+        builder.setPositiveButton(R.string.register, (dialog, which) -> {
+        });
         builder.setOnDismissListener(dialog -> {
         });
         //setting on click listener for the dialog box to cancel the dialog box
@@ -96,9 +99,17 @@ public class MyCustomDialog extends DialogFragment {
 
         //setting on click listener for the dialog box to register student
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
-            //TODO: add student to the database
-
-
+            //disable both buttons
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
+            dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setEnabled(false);
+            //add student to the database
+            int id = dbms.addStudent(name.getText().toString().trim());
+            Toast.makeText(getActivity(), id != -1 ? R.string.student_added : R.string.error_while_adding_student, Toast.LENGTH_SHORT).show();
+            //enable both buttons
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(true);
+            dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setEnabled(true);
+            //dismiss the dialog box
+            dialog.dismiss();
         });
 
     }
