@@ -8,24 +8,69 @@
     android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/student_name"
+            android:id="@+id/manzil"
             android:layout_width="0sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:text="@string/student_name"
             android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="@string/mazil"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/student_id"
+            android:id="@+id/sabqi"
             android:layout_width="0sp"
+            android:textAlignment="center"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/student_id"
+            android:text="@string/sabqi"
+            android:textColor="@color/white"
+            android:background="@drawable/border_left"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/end"
+            android:layout_width="0sp"
             android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/end"
+            android:textColor="@color/white"
+            android:background="@drawable/border_left"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/start"
+            android:layout_width="0sp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start"
+            android:background="@drawable/border_left"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/sabaq"
+            android:layout_width="0sp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sabaq"
+            android:background="@drawable/border_left"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/date"
+            android:background="@drawable/border_left"
+            android:layout_width="0sp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/date"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />

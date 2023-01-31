@@ -17,4 +17,6 @@
     <string name="end">ختم</string>
     <string name="sabaq">سبق</string>
     <string name="date">تاریخ</string>
+    <string name="yes">ہاں</string>
+    <string name="no">نہیں</string>
 </resources>
