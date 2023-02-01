@@ -138,7 +138,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:drawSelectorOnTop="true"
-        android:id="@+id/recycleView"
+        android:id="@+id/recycleView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

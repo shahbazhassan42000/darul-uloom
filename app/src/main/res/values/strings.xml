@@ -21,4 +21,10 @@
     <string name="no">نہیں</string>
     <string name="add_record">ریکارڈ اندراج</string>
     <string name="today_record">آج کا ریکارڈ</string>
+    <string name="sabaq_error">سبق لازمی چاہیئے</string>
+    <string name="start_error">شروع لازمی چاہیئے</string>
+    <string name="end_error">ختم لازمی چاہیئے</string>
+    <string name="manzil_error">منزل لازمی چاہیئے</string>
+    <string name="record_added">ریکارڈ شامل کر دیا گیا یے</string>
+    <string name="error_while_adding">ریکارڈ کا اندراج ناکام</string>
 </resources>

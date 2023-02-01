@@ -24,6 +24,8 @@ public class Record {
         this.student_id = student_id;
     }
 
+    public Record() {}
+
     //getters and setters
     public int getId() {
         return id;

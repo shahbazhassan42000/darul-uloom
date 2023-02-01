@@ -30,12 +30,12 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
     @Override
     public void onBindViewHolder(@NonNull RecordAdapter.RecordViewHolder holder, int position) {
         holder.record = records.get(position);
-        holder.date.setText(holder.record.getDate());
-        holder.sabaq.setText(holder.record.getSabaq());
-        holder.start.setText(holder.record.getStart());
-        holder.end.setText(holder.record.getEnd());
-        holder.sabqi.setText(holder.record.isSabqi()?String.valueOf(R.string.yes):String.valueOf(R.string.no));
-        holder.manzil.setText(holder.record.getManzil());
+        holder.date_output.setText(holder.record.getDate());
+        holder.sabaq_output.setText(String.valueOf(holder.record.getSabaq()));
+        holder.start_output.setText(holder.record.getStart());
+        holder.end_output.setText(holder.record.getEnd());
+        holder.sabqi_output.setText(holder.record.isSabqi()? "ہاں" : "نہیں");
+        holder.manzil_output.setText(String.valueOf(holder.record.getManzil()));
 
     }
 
@@ -46,15 +46,15 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
 
     public static class RecordViewHolder extends RecyclerView.ViewHolder {
         Record record;
-        TextView date,sabaq,start,end,sabqi,manzil;
+        TextView date_output,sabaq_output,start_output,end_output,sabqi_output,manzil_output;
         public RecordViewHolder(@NonNull View itemView) {
             super(itemView);
-            date = itemView.findViewById(R.id.date);
-            sabaq = itemView.findViewById(R.id.sabaq);
-            start = itemView.findViewById(R.id.start);
-            end = itemView.findViewById(R.id.end);
-            sabqi = itemView.findViewById(R.id.sabqi);
-            manzil = itemView.findViewById(R.id.manzil);
+            date_output = itemView.findViewById(R.id.date_output);
+            sabaq_output = itemView.findViewById(R.id.sabaq_output);
+            start_output = itemView.findViewById(R.id.start_output);
+            end_output = itemView.findViewById(R.id.end_output);
+            sabqi_output = itemView.findViewById(R.id.sabqi_output);
+            manzil_output = itemView.findViewById(R.id.manzil_output);
         }
     }
 }

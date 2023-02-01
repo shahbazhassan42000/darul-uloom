@@ -13,6 +13,7 @@
         android:textSize="22sp"
         android:textColor="@color/white"
         android:inputType="number"
+        android:textDirection="rtl"
         android:autofillHints="number" />
     <EditText
         android:id="@+id/start"
@@ -22,6 +23,7 @@
         android:textSize="22sp"
         android:textColor="@color/white"
         android:inputType="text"
+        android:textDirection="rtl"
         android:autofillHints="text" />
     <EditText
         android:id="@+id/end"
@@ -31,6 +33,7 @@
         android:textSize="22sp"
         android:textColor="@color/white"
         android:inputType="text"
+        android:textDirection="rtl"
         android:autofillHints="text" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -58,5 +61,6 @@
         android:textSize="22sp"
         android:textColor="@color/white"
         android:inputType="text"
+        android:textDirection="rtl"
         android:autofillHints="text" />
 </LinearLayout>

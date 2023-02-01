@@ -43,7 +43,6 @@ public class RecordActivity extends AppCompatActivity {
 
         //initializing the adapter
         adapter = new StudentAdapter(students);
-
         //setting the adapter
         recycleView.setAdapter(adapter);
     }
