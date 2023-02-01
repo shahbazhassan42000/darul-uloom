@@ -11,7 +11,7 @@
     <string name="student_added">شاگرد شامل کر دیا گیا یے</string>
     <string name="error_while_adding_student">شاگرد کا اندراج ناکام</string>
     <string name="student_id">شاگرد کی آی ڈی</string>
-    <string name="mazil">منزل</string>
+    <string name="manzil">منزل</string>
     <string name="sabqi">سبقی</string>
     <string name="start">شروع</string>
     <string name="end">ختم</string>
@@ -19,4 +19,6 @@
     <string name="date">تاریخ</string>
     <string name="yes">ہاں</string>
     <string name="no">نہیں</string>
+    <string name="add_record">ریکارڈ اندراج</string>
+    <string name="today_record">آج کا ریکارڈ</string>
 </resources>

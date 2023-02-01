@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10sp"
+    android:background="@color/secondary_dark"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/sabaq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/sabaq"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:inputType="number"
+        android:autofillHints="number" />
+    <EditText
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/start"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:inputType="text"
+        android:autofillHints="text" />
+    <EditText
+        android:id="@+id/end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/end"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:inputType="text"
+        android:autofillHints="text" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/sabqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:buttonTint="@color/white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sabqi"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/manzil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/manzil"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:inputType="text"
+        android:autofillHints="text" />
+</LinearLayout>

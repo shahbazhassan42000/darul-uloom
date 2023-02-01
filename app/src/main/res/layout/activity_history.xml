@@ -9,28 +9,60 @@
     tools:context=".HistoryActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20sp"
-        tools:ignore="UseCompoundDrawables">
-
-        <TextView
-            android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="DisableBaselineAlignment">
+        <LinearLayout
+            android:id="@+id/add_record_btn"
+            android:layout_width="0sp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/view_records"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:gravity="right"
+            tools:ignore="RtlHardcoded,UseCompoundDrawables">
 
-        <ImageView
-            android:layout_width="50sp"
-            android:layout_height="50sp"
-            android:layout_gravity="center"
-            android:layout_marginStart="10sp"
-            android:contentDescription="@string/add_student"
-            android:src="@drawable/student_icon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/add_record"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/add_record"
+                android:src="@drawable/record_add_icon" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            tools:ignore="RtlHardcoded,UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/studentNameInp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/student_name"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/add_student"
+                android:src="@drawable/student_icon" />
+        </LinearLayout>
+
     </LinearLayout>
     <LinearLayout
         android:paddingVertical="5sp"
@@ -47,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:text="@string/mazil"
+            android:text="@string/manzil"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />

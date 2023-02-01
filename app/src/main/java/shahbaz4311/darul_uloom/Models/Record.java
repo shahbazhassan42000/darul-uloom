@@ -7,13 +7,13 @@ public class Record {
     private int id;
     private String date;
     private int sabaq;
-    private int start;
-    private int end;
+    private String start;
+    private String end;
     private boolean sabqi;
     private int manzil;
     private int student_id;
 
-    public Record(int id, String date, int sabaq, int start, int end, boolean sabqi, int manzil, int student_id) {
+    public Record(int id, String date, int sabaq, String start, String end, boolean sabqi, int manzil, int student_id) {
         this.id = id;
         this.date = date;
         this.sabaq = sabaq;
@@ -49,19 +49,19 @@ public class Record {
         this.sabaq = sabaq;
     }
 
-    public int getStart() {
+    public String getStart() {
         return start;
     }
 
-    public void setStart(int start) {
+    public void setStart(String start) {
         this.start = start;
     }
 
-    public int getEnd() {
+    public String getEnd() {
         return end;
     }
 
-    public void setEnd(int end) {
+    public void setEnd(String end) {
         this.end = end;
     }
 

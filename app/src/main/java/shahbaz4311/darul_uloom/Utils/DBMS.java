@@ -45,7 +45,7 @@ public class DBMS extends SQLiteOpenHelper {
 
         //creating record table
         db.execSQL("CREATE TABLE IF NOT EXISTS " + RECORD_TABLE + " (" + RECORD_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,  " +
-                RECORD_DATE + " TEXT, " + RECORD_SABAQ + " INTEGER, " + RECORD_START + " INTEGER, " + RECORD_END + " INTEGER, " +
+                RECORD_DATE + " TEXT, " + RECORD_SABAQ + " INTEGER, " + RECORD_START + " TEXT, " + RECORD_END + " TEXT, " +
                 RECORD_SABQI + " INTEGER, " + RECORD_MANZIL + " INTEGER, " + RECORD_STUDENT_ID + " INTEGER, " +
                 "FOREIGN KEY (" + RECORD_STUDENT_ID + ") REFERENCES " + STUDENT_TABLE + "(" + STUDENT_ID + "));");
     }
@@ -152,8 +152,8 @@ public class DBMS extends SQLiteOpenHelper {
             int id = cursor.getInt(cursor.getColumnIndex(RECORD_ID));
             String date = cursor.getString(cursor.getColumnIndex(RECORD_DATE));
             int sabaq = cursor.getInt(cursor.getColumnIndex(RECORD_SABAQ));
-            int start = cursor.getInt(cursor.getColumnIndex(RECORD_START));
-            int end = cursor.getInt(cursor.getColumnIndex(RECORD_END));
+            String start = cursor.getString(cursor.getColumnIndex(RECORD_START));
+            String end = cursor.getString(cursor.getColumnIndex(RECORD_END));
             boolean sabqi = cursor.getInt(cursor.getColumnIndex(RECORD_SABQI))>0;
             int manzil = cursor.getInt(cursor.getColumnIndex(RECORD_MANZIL));
             int student_id = cursor.getInt(cursor.getColumnIndex(RECORD_STUDENT_ID));
